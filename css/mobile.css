@@ -1,0 +1,68 @@
+
+/* LINK STYLES SECTIONS FOR THE WEBSITE */
+nav a  { color: #331C12; text-decoration:none;font-weight:bold;font-size: .9em; padding: 5px 22px;
+border-radius: 5px;  }    /* unvisited links */
+nav a:visited { color: #331C12; }   /* visited links   */
+nav a:hover   { color: #331C12; } /* user hovers     */
+nav a:active  { color: #331C12;}   /* active links    */
+/* all body links */
+#mainContent a {  text-decoration:underline; margin: 0; padding: .5em 1em 1em 2em;}
+#mainContent a:link { color:#2c2e21;   }
+#mainContent a:visited { color:#2c2e21;   }
+#mainContent a:hover { color:#2c2e21;   }
+#mainContent a:active { color:#2c2e21;   }
+/*override the padding for the links in the aside elements */
+#mainContent aside a{ padding:0;}
+#mainContent img {
+	max-width: 100%;
+	padding: 15px;
+}
+/*.anchor-links{ color:red; padding: 2em; } */
+
+article a{padding: 1em; display: inline-block;}
+header {
+	margin: 0;
+	padding: 1.5em;
+	height: 150px;
+	background: #85AB18 url(../images/interfaceImages/banner-background.png) no-repeat -200px; 
+	-webkit-background-size: cover;
+	-moz-background-size: cover;
+	-o-background-size: cover;
+	background-size: cover;
+	border-bottom: 3px solid #2c2e21
+	
+	
+}
+header h1 {
+	text-align: left;
+	margin: 0; 
+	font-size:2em; 
+	padding:30px 0px 20px 0px; 
+	width: 100px;
+	width: 350px; color:#a7c520; }
+
+nav{
+	text-align:center;
+	margin-top: 0; 
+	background: #85AB18;
+}
+nav ul {
+	width: 100%;
+	display:inline-block;
+	overflow: hidden;
+	list-style: none;
+	text-align: left;
+	padding:0;	
+}
+nav ul li {	
+	font-size: 2em;
+	text-decoration:none;
+}
+
+nav ul li:hover {
+	background-color: #662200;
+}
+
+nav ul li a:hover {
+		color: #85AB18;
+}

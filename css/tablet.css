@@ -1,0 +1,74 @@
+/* html{
+	background-color: red;
+} */
+
+body {
+	/*color:#331C12; ALMOST BLACK  
+	color:#FFEDE5;  	
+	color:#f5f6d4; BODY BACKGROUND
+	color:#A7C520; Light Green Background 
+	color:#193441; */
+	line-height: 1.5em;
+	font-family: Verdana, Geneva, sans-serif;
+	font-size:16px;
+	background: #f5f6d4;
+	width:100%; 
+	margin: 0 auto;
+	color:#6C6E3C; /*  ALL BASE TEXT COLOR  */
+}
+
+/* LINK STYLES SECTIONS FOR THE WEBSITE */
+nav a  { color: #331C12; text-decoration:none;font-weight:bold;font-size: .9em; padding: 5px 22px;
+border-radius: 5px;  }    /* unvisited links */
+nav a:visited { color: #331C12; }   /* visited links   */
+nav a:hover   { color: #331C12; } /* user hovers     */
+nav a:active  { color: #331C12;}   /* active links    */
+/* all body links */
+#mainContent a {  text-decoration:underline; margin: 0; padding: .5em 1em 1em 2em;}
+#mainContent a:link { color:#2c2e21;   }
+#mainContent a:visited { color:#2c2e21;   }
+#mainContent a:hover { color:#2c2e21;   }
+#mainContent a:active { color:#2c2e21;   }
+/*override the padding for the links in the aside elements */
+#mainContent aside a{ padding:0;}
+/*.anchor-links{ color:red; padding: 2em; } */
+
+article a{padding: 1em; display: inline-block;}
+header {
+	margin: 0;
+	height: 150px;
+	background: #85AB18 url(../images/interfaceImages/banner-background.png);
+	background-repeat: no-repeat;
+	background-position: center;
+	-webkit-background-size: cover;
+	-moz-background-size: cover;
+	-o-background-size: cover;
+	background-size: cover;
+	
+	
+}
+header h1 {margin: 0; font-size:2.5em; font-weight:bolder; padding:30px 20px 20px 30px; width: 350px; color:#a7c520; }
+
+nav{
+	text-align:center;
+	margin-top: 0; 
+	background: #85AB18;
+}
+nav ul {
+/*	width:95%;*/
+	display:inline-block;
+	overflow: hidden;
+	border-left-width: .1em;
+	border-left-style: solid;
+	list-style:none;
+	text-align: left;
+	padding:0;	
+}
+nav ul li {	
+	display:inline-block;
+	/*float: left;
+	padding: .5em ;*/
+	border-right: .1em solid;
+	border-right-color:#2c2e21;
+	text-decoration:none;
+}

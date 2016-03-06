@@ -1,0 +1,280 @@
+@charset "UTF-8";
+html{
+	background: #A7C520 url( ../images/interfaceImages/body-background.png) repeat-x 350px 0px;
+}
+body {
+	/*color:#331C12; ALMOST BLACK  
+	color:#FFEDE5;  	
+	color:#f5f6d4; BODY BACKGROUND
+	color:#A7C520; Light Green Background 
+	color:#193441; */
+	line-height: 1.5em;
+	font-family: Verdana, Geneva, sans-serif;
+	font-size:16px;
+	background: #f5f6d4;
+	width:900px; 
+	margin: 0 auto;
+	color:#6C6E3C; /*  ALL BASE TEXT COLOR  */
+}
+
+
+h1 { font-size: 2em; font-weight:normal; margin: -.3em 0 .4em 0; padding:0 30px 0 30px; line-height: 1em; clear:left; color:#2c2e21;}
+h2 { font-size: 1.5em; font-weight:normal; margin: .5em 0 .2em 0; padding:0 30px 0 30px; clear:left; color:#2c2e21;}
+h3 { font-size: 1.3em; font-weight:normal; margin: -.4em 0em .2em 0em; padding:0 30px 0 30px; clear:left; color:#2c2e21;}
+h4 {padding:0 30px 0 30px; }
+p { margin: 0 0 .9em 0; padding:0 2em; line-height: 1.3em; clear:left; }
+img {   border: 2px solid #7F472E; padding:0px; margin:5px;  }
+
+/* LINK STYLES SECTIONS FOR THE WEBSITE */
+nav a  { color: #331C12; text-decoration:none;font-weight:bold;font-size: .9em; padding: 5px 22px;
+border-radius: 5px;  }    /* unvisited links */
+nav a:visited { color: #331C12; }   /* visited links   */
+nav a:hover   { color: #331C12; } /* user hovers     */
+nav a:active  { color: #331C12;}   /* active links    */
+/* all body links */
+#mainContent a {  text-decoration:underline; margin: 0; padding: .5em 1em 1em 2em;}
+#mainContent a:link { color:#2c2e21;   }
+#mainContent a:visited { color:#2c2e21;   }
+#mainContent a:hover { color:#2c2e21;   }
+#mainContent a:active { color:#2c2e21;   }
+/*override the padding for the links in the aside elements */
+#mainContent aside a{ padding:0;}
+/*.anchor-links{ color:red; padding: 2em; } */
+
+article a{padding: 1em; display: inline-block;}
+header {
+	height: 150px;
+	background: #85AB18 url(../images/interfaceImages/banner-background.png);
+}
+header h1 {font-size:2.5em; font-weight:bolder; padding:30px 20px 20px 30px; width: 350px; color:#a7c520; }
+
+nav{
+	text-align:center;
+	margin-top: 0; 
+	margin-bottom: 15px;
+	background: #85AB18;
+}
+nav ul{
+	width:auto;
+	display:inline-block;
+	overflow: hidden;
+	border-left-width: .1em;
+	border-left-style: solid;
+	list-style:none;
+	text-align:center;
+	padding:0;	
+}
+nav ul li{	
+	display:inline-block;
+	/*float: left;
+	padding: .5em ;*/
+	border-right: .1em solid;
+	border-right-color:#2c2e21;
+	text-decoration:none;}
+
+nav h2{
+	display:none;	
+}
+#mainContent{
+	background-color:#F5F6D4;
+}
+#mainContent{margin: 30px 0px 0px 0px; clear:both;}
+
+aside{float: right; border: solid 1px; border-radius: 1em; margin:2.5em 1em; width:36%; height: 90%; }
+aside p {padding:0px 30px;}
+aside div p{padding:0;} 
+aside h3, aside img{padding:0px 10px 0px 30px; margin:0;}
+footer{	background-color:#A7C520; color:#ffffff;  text-align:center; }
+form {margin: 10px 10px 30px 30px;;}
+button{ margin:5px 5px 5px 30px;}
+
+form {
+	background-color: rgba(139,146,139, 0.2);
+	border-radius: 1em;
+	margin: 1em;
+	width: 56%;
+}
+/**  get rid of the bullet list graphic ***/
+
+form ul{
+  list-style-type: none;  
+}
+
+/**  give the fieldset some styles (the fieldset set multiple form sections apart) ***/
+
+fieldset{
+	margin-top: 1em;
+	border: none;
+	line-height: 1.6em;	
+	background-color: rgba(139, 146, 139, .01);
+}
+
+/**  the legend is a label for each fieldset ***/
+legend{
+	font-style: italic;
+	color: #7f472e;
+	background-color:#d6dcd6;
+	padding: 2px 5px;
+	border-radius: 5px;
+	border-top: 1px;
+	border-top-color: #d6dcd6;
+}
+
+/**  we use the CSS3 attribute filter to selectivly style certain input elements ***/
+input[type="text"],
+input[type="number"],
+input[type="email"], 
+input[type="select"],
+input[type="tel"],
+input[type="date"],
+input[type="password"],
+textarea,
+input[type="checkbox"]{
+	width: 10em;	
+	border: 1px solid #abb0ab;
+	padding: .3em;
+    margin: 0 .8em;
+	outline: none;
+}
+textarea{
+	width: 20em;
+	height: 8em;
+}
+
+select{
+    padding: 2px;
+    margin: 0 10px;
+}
+/***   FORM EVENT STYLING **** */
+input[type="text"]:focus, 
+input[type="text"]:hover, 
+input[type="number"]:focus, 
+input[type="number"]:hover, 
+input[type="date"]:focus, 
+input[type="date"]:hover, 
+input[type="tel"]:focus, 
+input[type="tel"]:hover, 
+input[type="password"]:focus, 
+input[type="password"]:hover{
+background-color: lightcyan;
+border: 1px solid #669900;
+		
+}
+/* use the attribute filter to style the submit button uniquely   */
+input[type="submit"]{
+	border: 1px solid #d96849;
+	background-color: #466c8c;
+	color: #f5f6d4;
+	border-radius: 5px;
+	margin-top: 10px;
+	padding: 10px 10px;
+    margin: 0 0 0 0px;
+	cursor: pointer;	
+	/*float: left; clear: left;*/
+}
+
+input[type="submit"]:hover{
+
+	background-color: #7CA0BD;
+	
+}
+
+label{
+	float: left;
+	width: 260px;
+	clear: left;
+    text-align: right;
+	
+}
+
+.checkboxes{
+	/*float: right;*/
+}
+
+.error{
+    padding: 20px;
+    background-color: red  
+}
+
+.thumbs_block{
+	padding: .3em;
+	/*margin: 2em;*/
+	background: #d6dcd6;
+}
+
+/* shopping Cart styles  */
+#mainContent #shopping_cart_div{
+	padding: 0px;
+	margin: 0px;
+
+}
+#mainContent #shopping_cart_div img{
+	margin: 0;
+}
+
+.thumbs_block > div{
+	display: inline-block;
+	width: 20%;
+	text-align: center;
+} 
+.thumbs_block > div > p{
+	/*display: inline-block;
+	clear: both;*/
+	margin: 1em 0 0 0;
+
+} 
+.thumbs_block > img{
+	/*padding: 4em;
+	display: block;*/
+} 
+
+
+/*************************** panel styles ************/
+.tab-panels {
+	padding:30px;
+	margin:20px;
+
+}
+.tab-panels ul{
+	margin: 0;
+	padding:0;
+		 
+}
+
+.tab-panels ul li{
+	list-style-type:none;
+	display:inline-block;
+	background: #abb0ab;
+	margin:0;
+	padding: 3px 10px;
+	border-radius: 10px 10px 0 0;
+	color:#331C12;
+	font-weight: 200;
+	cursor: pointer;
+}
+
+.tab-panels .tabs li.active{
+	color: #7F472E;
+	background: #d6dcd6;
+}
+
+.tab-panels ul li:hover {
+	color:fff;
+	background:#F5F6D4;
+}
+.tab-panels ul li:active{
+	color:#fff;
+	background:#ABB0AB;
+}
+
+.tab-panels .panel{
+	/*display:none;     UNCOMMENT THIS SO ONLY THE ACTIVE DIV SHOWS    */
+	background:#D6DCD6;
+	/*padding: 30px;*/
+	border-radius: 0 0 10px 10px;
+}
+
+.tab-panels .panel.active{
+	display:block;
+}
+

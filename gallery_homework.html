@@ -1,0 +1,155 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Gallery</title>
+<!-- make sure we have cross device scaling of content standard
+	so as not get the "shrunken text" on mobile
+	      -->
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<link href="css/mobile.css" type="text/css" rel="stylesheet" 
+media="screen and (min-width:1px) and (max-width:500px)"   />
+
+<link href="css/tablet.css" type="text/css" rel="stylesheet"
+media="screen and (min-width:501px) and (max-width:700px)"
+ />
+
+<link href="css/large.css" type="text/css" rel="stylesheet" 
+media="screen and (min-width:701px) and (max-width:2048px)"
+/>
+
+<link href="css/print.css" rel="stylesheet" type="text/css" media="print" />
+ 
+
+<!-- <script src="javascript/objects.js" type="text/javascript"> </script> -->
+
+<style>
+	/*   creating media queries in CSS...
+	 	typically best practice to due to speed (the server just has one file file to download)
+	 * */
+	/*@media (min-width:1px) and (max-width: 600px){
+		body{
+			width: 50%;
+			color: red;
+			background-color: yellow;
+		}
+		
+	}
+	
+	@media (min-width: 601px) and (max-width: 2048px){
+		body{
+			width: 100%;
+			color: blue;
+			background-color: red;
+		}
+		
+	}*/
+	
+	
+</style>
+
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/2.2.0/jquery.min.js"></script>
+
+<script src="http://cdnjs.cloudflare.com/ajax/libs/gsap/latest/TweenMax.min.js"> </script>
+</head>
+<body> 
+<script>
+	$("document").ready( function(){
+		
+		//create event bindings on ALL tab panel li buttons
+		$(".tab-panels .tabs li").on("click", function(){
+			//find and REMOVE the active class for the unordered list item
+			$(".tab-panels .tabs li.active").removeClass("active");
+			//add the "active" class to the clicked element
+			$(this).addClass("active");
+			
+			//find out which panel to show by using the current elemets rel attribute
+			//assign the rel of the li to a variable for testing later
+			var panelToShow = $(this).attr("rel");
+			
+			//hide the current panel
+			$(".tab-panels .panel.active").slideUp(300, function(){
+				$(this).removeClass("active");
+				//show new panel
+				$("#"+panelToShow).slideDown(300, function(){
+					$(this).addClass("active");
+				});
+			});
+			
+			
+		});//end of event attach
+	
+		
+	});
+
+</script>
+	
+<header>
+	<h1>Gallery</h1> 
+	</header>
+	<nav id="navigation" role="navigation">
+		<ul>
+			<li><a href="index.html">Home</a></li>
+			<li><a href="sign-up.html">Sign Up</a></li>
+			<li><a href="gallery.html">Gallery</a></li>
+			<li><a href="#">About Us</a></li>
+			<li><a href="#">Contact Us</a></li>
+		</ul>
+	</nav>
+<div id="mainContent">
+	<h1>Gallery</h1>
+	<h2>Three Mediums</h2>
+	<div class="tab-panels">
+		<ul class="tabs">
+			<li rel="drawing" class="active">drawing</li>
+			<li rel="water-color">water color</li>
+			<li rel="oil">oil</li>
+		</ul>	
+		
+		<div id="drawing" class="panel active">
+			<img src="images/drawing/thumbs/artwork_1.jpg" />
+			<img src="images/drawing/thumbs/artwork_2.jpg" />
+			<img src="images/drawing/thumbs/artwork_3.jpg" />
+			<img src="images/drawing/thumbs/artwork_4.jpg" />
+			<img src="images/drawing/thumbs/artwork_5.jpg" />
+			<img src="images/drawing/thumbs/artwork_6.jpg" />
+			<img src="images/drawing/thumbs/artwork_7.jpg" />
+			<img src="images/drawing/thumbs/artwork_8.jpg" />
+			<img src="images/drawing/thumbs/artwork_9.jpg" />
+			<img src="images/drawing/thumbs/artwork_10.jpg" />
+		</div>
+			<div id="water-color" class="panel">
+			<img src="images/watercolor/thumbs/artwork_1.jpg" />
+			<img src="images/watercolor/thumbs/artwork_2.jpg" />
+			<img src="images/watercolor/thumbs/artwork_3.jpg" />
+			<img src="images/watercolor/thumbs/artwork_4.jpg" />
+			<img src="images/watercolor/thumbs/artwork_5.jpg" />
+			<img src="images/watercolor/thumbs/artwork_6.jpg" />
+			<img src="images/watercolor/thumbs/artwork_7.jpg" />
+			<img src="images/watercolor/thumbs/artwork_8.jpg" />
+			<img src="images/watercolor/thumbs/artwork_9.jpg" />
+			<img src="images/watercolor/thumbs/artwork_10.jpg" />
+		</div>
+		<div id="oil" class="panel">
+			<img src="images/oil/thumbs/artwork_1.jpg" />
+			<img src="images/oil/thumbs/artwork_2.jpg" />
+			<img src="images/oil/thumbs/artwork_3.jpg" />
+			<img src="images/oil/thumbs/artwork_4.jpg" />
+			<img src="images/oil/thumbs/artwork_5.jpg" />
+			<img src="images/oil/thumbs/artwork_6.jpg" />
+			<img src="images/oil/thumbs/artwork_7.jpg" />
+			<img src="images/oil/thumbs/artwork_8.jpg" />
+		</div>
+	</div><!--closing tab-panels -->
+
+</div><!-- closing primaryContent   -->
+
+<footer>
+	<p class="odd">
+		&copy; Copyright  by jason zeringue
+	</p>
+</footer>
+
+</body>
+</html>

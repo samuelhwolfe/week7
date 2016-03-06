@@ -1,0 +1,210 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Gallery Filter</title>
+	
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<link href="css/mobile.css" type="text/css" rel="stylesheet" 
+media="screen and (min-width:1px) and (max-width:500px)"   />
+
+<link href="css/tablet.css" type="text/css" rel="stylesheet"
+media="screen and (min-width:501px) and (max-width:700px)"
+ />
+
+<link href="css/large.css" type="text/css" rel="stylesheet" 
+media="screen and (min-width:701px) and (max-width:2048px)"
+/>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/2.2.0/jquery.min.js"></script>
+<script src="http://cdnjs.cloudflare.com/ajax/libs/gsap/latest/TweenMax.min.js"> </script>
+<!--<link href="css/large.css" type="text/css" rel="stylesheet" /> -->
+</head>
+<body class="page">
+	
+	<script>
+		$("document").ready(function() {
+			//$("img").not(".robots").addClass("error");
+			//$("#drawing").children().addClass("error");
+			//$(".panel").children().addClass("error");
+			var firstImage = $("#drawing img:nth-child(5)");
+			
+			//firstImage.next().addClass("error");
+			//firstImage.prev().addClass("error");
+			
+			//***********     GREENSOCK     ****************
+	
+			//TweenMax.to("#drawing", 3, {x:300, ease:Bounce.easeOut, repeat:2, yoyo:true} );
+			
+			var animSpeed = 1;
+			
+//			TweenMax.to("header", animSpeed, {x:500, alpha:.5, ease:Bounce.easeOut} );
+//			
+//			TweenMax.to("nav", animSpeed, {x:500, alpha:.5, ease:Bounce.easeOut, delay:2} );
+//			
+//			TweenMax.to("#drawing", animSpeed, {x:500, alpha:.5, ease:Bounce.easeOut, delay:4} );
+//			
+//			TweenMax.to("#water-color", animSpeed, {x:500, alpha:.5, ease:Bounce.easeOut, delay:6} );
+//			
+//			TweenMax.to("#water-color", animSpeed, {x:500, alpha:.5, ease:Bounce.easeOut, delay:6} );
+//			
+//			TweenMax.to("aside", animSpeed, {x:-1500, alpha:.5, ease:Bounce.easeOut, delay:8} );
+			
+//			TweenMax.to("#water-color", 5, {rotation:-360, repeat:99});
+//			TweenMax.to("oil", 5, {rotation:360, repeat:99});
+			
+//			TweenMax.from("header", animSpeed, {
+//				x:50,
+//				alpha:0,
+//				ease:Bounce.easeOut
+//			});
+//			
+//			TweenMax.from("nav", animSpeed, {x:500, alpha:0, ease:Elastic.easeOut, delay:2} );
+//			
+//			TweenMax.from("#drawing", animSpeed, {x:500, alpha:0, ease:Elastic.easeOut, delay:4} );
+//			
+//			TweenMax.from("#water-color", animSpeed, {x:500, alpha:0, ease:Elastic.easeOut, delay:6} );
+//			
+//			TweenMax.from("#oil", animSpeed, {x:500, alpha:0, ease:Elastic.easeOut, delay:8} );
+//			
+//			TweenMax.from("aside", animSpeed, {x:-1500, alpha:0, ease:Elastic.easeOut, delay:10} );
+			
+			//create a TimeLineLine instance
+			
+			var myTimeLine = new TimelineLite();
+			
+			myTimeLine.from("header", animSpeed, {x:50, alpha:0, ease:Bounce.easeOut});
+			
+			myTimeLine.from("nav", animSpeed, {x:50, alpha:0, ease:Elastic.easeOut});
+			
+			myTimeLine.from("#drawing", animSpeed, {x:50, alpha:0, ease:Elastic.easeOut} );
+			
+			myTimeLine.from("#water-color", animSpeed, {x:50, alpha:0, ease:Elastic.easeOut} );
+			
+			myTimeLine.from("#oil", animSpeed, {x:50, alpha:0, ease:Elastic.easeOut} );
+			
+			myTimeLine.from("aside", animSpeed, {x:-50, alpha:0, ease:Elastic.easeOut} );
+			
+			myTimeLine.staggerFrom("img", animSpeed, {x:-50, ease:Bounce.easeOut}, .5);
+			
+//			myTimeLine.reverse(0);//reverse the entire animation sequence
+			
+//			myTimeLine.timeScale(1);
+		});
+		
+
+	</script>
+
+<header>
+	<h1>Artwork Techniques</h1> 
+	</header>
+	<nav id="navigation" role="navigation">
+		<ul>
+			<li><a href="index.html">Home</a></li>
+			<li><a href="sign-up.html">Sign Up</a></li>
+			<li><a href="gallery.html">Gallery</a></li>
+			<li><a href="galleryFilter.html">Gallery Filter</a></li>
+			<li><a href="#">About Us</a></li>
+			<li><a href="#">Contact Us</a></li> 
+		</ul>
+		<h2>main navigation</h2> 
+	</nav>
+
+
+<div id="mainContent">
+	<h1>Gallery</h1>
+	<h2>Three Mediums</h2>
+	<!--  sliding tabs  -->
+	<div class="tab-panels">
+		
+    	<!-- <ul class="tabs">
+        	<li rel="drawing" class="active">drawing </li>
+            <li rel="water-color" >watercolor</li>
+            <li rel="oil">oil</li>
+    	</ul> -->
+    	<!-- filter Buttons   -->
+		
+		<button id="robots" type="button">Robots</button>
+		<button id="no-figures" type="button">No Figures</button>
+		<button id="plus-3" type="button"> 3 or more figures</button>
+		<button id="clear" type="button">Clear Filter</button>
+		
+        <div id="drawing" class="panel"> 
+        	<img src="images/drawing/thumbs/artwork_1.jpg" class="plus-3" width="150" height="100" />
+            <img src="images/drawing/thumbs/artwork_2.jpg" class="plus-3" width="150" height="100"  />
+            <img src="images/drawing/thumbs/artwork_3.jpg" class="robots" width="150" height="100"  />
+            <img src="images/drawing/thumbs/artwork_4.jpg" width="150" height="100"  />
+            <img src="images/drawing/thumbs/artwork_5.jpg" width="150" height="100"  />
+            <img src="images/drawing/thumbs/artwork_6.jpg" width="150" height="100"  />
+            <img src="images/drawing/thumbs/artwork_7.jpg" class="plus-3" width="150" height="100"  />
+            <img src="images/drawing/thumbs/artwork_8.jpg" class="plus-3"width="150" height="100"  />
+            <img src="images/drawing/thumbs/artwork_9.jpg" class="plus-3" width="150" height="100"  />
+            <img src="images/drawing/thumbs/artwork_10.jpg" class="no-figure" width="150" height="100"  />
+            <img src="images/drawing/thumbs/artwork_11.jpg" class="no-figure" width="150" height="100"  />
+            <img src="images/drawing/thumbs/artwork_12.jpg" width="150" height="100"  />
+            <img src="images/drawing/thumbs/artwork_13.jpg" class="robots" width="150" height="100"  />
+            <img src="images/drawing/thumbs/artwork_14.jpg" class="no-figure"width="150" height="100"  />
+            <img src="images/drawing/thumbs/artwork_15.jpg" class="no-figure"width="150" height="100"  />
+            <img src="images/drawing/thumbs/artwork_16.jpg" width="150" height="100"  />
+            <img src="images/drawing/thumbs/artwork_17.jpg" class="robots" width="150" height="100"  />
+            <img src="images/drawing/thumbs/artwork_18.jpg" width="150" height="100"  />
+            <img src="images/drawing/thumbs/artwork_19.jpg" class="robots" width="150" height="100"  />
+            <img src="images/drawing/thumbs/artwork_20.jpg" class="plus-3" width="150" height="100"  />
+            <img src="images/drawing/thumbs/artwork_21.jpg" class="plus-3" width="150" height="100"  />
+            <img src="images/drawing/thumbs/artwork_22.jpg" width="150" height="100"  />
+            <img src="images/drawing/thumbs/artwork_23.jpg" class="no-figure" width="150" height="100"  />
+            <img src="images/drawing/thumbs/artwork_24.jpg" class="plus-3"width="150" height="100"  />
+        </div>
+        
+        <div id="water-color" class="panel active"> 
+        		<img src="images/watercolor/thumbs/artwork_1.jpg" class="no-figure" width="150" height="100" />
+            <img src="images/watercolor/thumbs/artwork_2.jpg" width="150" height="100" />
+            <img src="images/watercolor/thumbs/artwork_3.jpg" width="150" class="no-figure" height="100" />
+            <img src="images/watercolor/thumbs/artwork_4.jpg" width="150" height="100" />
+            <img src="images/watercolor/thumbs/artwork_5.jpg" width="150" height="100" />
+            <img src="images/watercolor/thumbs/artwork_6.jpg" width="150" height="100" />
+            <img src="images/watercolor/thumbs/artwork_7.jpg" width="150" height="100" />
+            <img src="images/watercolor/thumbs/artwork_8.jpg" width="150" height="100" />
+            <img src="images/watercolor/thumbs/artwork_9.jpg" width="150" height="100" />
+            <img src="images/watercolor/thumbs/artwork_10.jpg" width="150" height="100" />
+        </div>
+        
+        <div id="oil" class="panel"> 
+        		<img src="images/oil/thumbs/artwork_1.jpg" width="150" height="100"/>
+            <img src="images/oil/thumbs/artwork_2.jpg" width="150" height="100" />
+            <img src="images/oil/thumbs/artwork_4.jpg" width="150" height="100" />
+            <img src="images/oil/thumbs/artwork_5.jpg" width="150" height="100" />
+            <img src="images/oil/thumbs/artwork_6.jpg" width="150" height="100" />
+            <img src="images/oil/thumbs/artwork_7.jpg" class="robots" width="150" height="100" />
+            <img src="images/oil/thumbs/artwork_8.jpg" width="150" height="100" />
+        
+        </div>
+    
+    
+    </div><!--closing tab-panels -->
+
+<aside>
+		<h2>Artist Links</h2> 
+		<p>Artist's work that has inspired me become a better illustrator / painter.<br>
+		I find the 16th and 17th centery facinating due to painting the wrong kind of subject could land you in the clutches of the early church's "Holy Inquisition", and be subject to the<a href="http://listverse.com/2013/09/24/10-horrifying-tortures-of-early-christians/"> tools</a> to help change your mind </p>
+		<ul>
+			<li><a href="http://www.metmuseum.org/toah/hd/crvg/hd_crvg.htm" target="_blank">Caravaggio (Michelangelo Merisi) (1571–1610)</a></li>
+			<li><a href="http://www.arthistoryarchive.com/arthistory/baroque/Artemisia-Gentileschi.html" target="_blank">Artemisia Gentileschi</a></li>
+			<li><a href="http://en.wikipedia.org/wiki/Frida_Kahlo" target="_blank">Frida Kahlo</a></li>
+			<li><a href="http://www.markryden.com/" target="_blank">Mark Ryden</a></li>
+			<li><a href="http://www.metmuseum.org/toah/hd/verm/hd_verm.htm" target="_blank">Johannes Vermeer</a></li>
+			<li><a href="http://en.wikipedia.org/wiki/Jean-Honor%C3%A9_Fragonard" target="_blank">Jean-Honor Fragonard</a></li>
+		</ul>
+	</aside>
+
+
+</div><!-- closing primaryContent   -->
+
+<footer>
+	<p class="odd">
+		&copy; Copyright  by jason zeringue
+	</p>
+</footer>
+<script type="text/javascript" src="javascript/image-filter.js"></script>
+</body>
+</html>

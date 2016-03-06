@@ -1,0 +1,161 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Sign Up</title>
+	
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<link href="css/mobile.css" type="text/css" rel="stylesheet" 
+media="screen and (min-width:1px) and (max-width:500px)"   />
+
+<link href="css/tablet.css" type="text/css" rel="stylesheet"
+media="screen and (min-width:501px) and (max-width:700px)"
+ />
+
+<link href="css/large.css" type="text/css" rel="stylesheet" 
+media="screen and (min-width:701px) and (max-width:2048px)"
+/>
+	
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/2.2.0/jquery.min.js"></script>
+	
+<script src="http://cdnjs.cloudflare.com/ajax/libs/gsap/latest/TweenMax.min.js"> </script>
+
+<!--<link href="css/large.css" rel="stylesheet" type="text/css" />-->
+
+</head> 
+	
+	<script>
+	$("document").ready( function(){
+		//alert("hello world from jQuery");
+		//$("img").css("border", "3px solid green");//all images
+		//$("img:lt(5)").css("border", "3px solid green");
+		//$("li").css("border", "3px solid green");
+		//$("li a").css("background-color", "red");
+			$("form ul li:nth-child(2n)").css("background", "rgba(50, 100, 100, 0.2)");
+		//$("img").slideUp(2000);
+		
+		
+		
+	});
+
+</script>
+<body class="page" id="top"> 
+	<header>
+	<h1>Sign Up</h1> 
+	</header>
+	<nav id="navigation" role="navigation">
+		<ul>
+			<li><a href="index.html">Home</a></li>
+			<li><a href="sign-up.html">Sign Up</a></li>
+			<li><a href="gallery.html">Gallery</a></li>
+			<li><a href="galleryFilter.html">Gallery Filter</a></li>
+			<li><a href="#">About Us</a></li>
+			<li><a href="#">Contact Us</a></li>
+		</ul>
+		<h2>main navigation</h2> 
+	</nav>
+
+	<div id="mainContent">
+	<aside>
+			<h2>Artist Links</h2> 
+			<p>Artist's work that has inspired me become a better illustrator / painter.<br>
+			I find the 16th and 17th centery facinating due to painting the wrong kind of subject could land you in the clutches of the early church's "Holy Inquisition", and be subject to the<a href="http://listverse.com/2013/09/24/10-horrifying-tortures-of-early-christians/"> tools</a> to help change your mind </p>
+			<ul>
+				<li><a href="http://www.metmuseum.org/toah/hd/crvg/hd_crvg.htm" target="_blank">Caravaggio (Michelangelo Merisi) (1571–1610)</a></li>
+				<li><a href="http://www.arthistoryarchive.com/arthistory/baroque/Artemisia-Gentileschi.html" target="_blank">Artemisia Gentileschi</a></li>
+				<li><a href="http://en.wikipedia.org/wiki/Frida_Kahlo" target="_blank">Frida Kahlo</a></li>
+				<li><a href="http://www.markryden.com/" target="_blank">Mark Ryden</a></li>
+				<li><a href="http://www.metmuseum.org/toah/hd/verm/hd_verm.htm" target="_blank">Johannes Vermeer</a></li>
+				<li><a href="http://en.wikipedia.org/wiki/Jean-Honor%C3%A9_Fragonard" target="_blank">Jean-Honor Fragonard</a></li>
+			</ul>
+		</aside>
+		<h2>Please Create An Account.</h2>
+		<!-- A Simple Form    -->
+		<form id="sign-up-form" method="post" action="#" >
+			<fieldset>
+				<h2>Create An Account</h2>
+				<ul>
+					<li>
+						<label for="f-name-label">First Name</label>
+						<input type="text" name="first-name" id="f-name-label" placeholder="First Name" required  /> 	
+					</li>
+	
+					<li>
+						<label for="l-name-label">Last Name</label>
+						<input type="text" name="last-name" id="l-name-label" placeholder="Last Name" required /> 
+						
+					</li>
+					
+					
+					<li>
+						<label>Date Of Birth Year</label>
+						<select name="year" required>
+							<option value="1970">1970</option>
+							<option value="1971">1971</option>
+							<option value="1972">1972</option>
+							<option value="1973">1973</option>
+							<option value="1974">1974</option>
+							<option value="1975">1975</option>
+							
+						</select>
+					</li>
+
+					<li>
+						<label>Date Of Birth Day</label>
+						<select name="day">
+							<option value="1">1</option>
+							<option value="2">2</option>
+							<option value="3">3</option>
+							<option value="4">4</option>
+							<option value="5">5</option>
+							<option value="6">6</option>
+							
+						</select>
+						
+					</li>
+					<li>
+						<label>Please Enter a valid email</label>
+						<input type="email" name="email" />	
+					</li>
+					<li>
+						<label>please enter a donation amount</label><input type="number" value="100" 
+						 min="1" max="101" placeholder="100" / >
+					</li>
+					<li>
+						<label>Enter Zip Code</label>
+						<input type="text"  placeholder="90210"
+						pattern="^[0-9]{5}" required />  
+					</li>
+					
+					<li>
+						<label>Favorite short quote (under 200 characters)</label>
+						<textarea required  placeholder="You want weapons? We’re in a library! Books! The best weapons in the world!" maxlength="200"> </textarea> 
+					</li>
+					
+					<li>
+						<label>Please Pick a date</label>
+						<input type="date" id="datepicker" name="date" />
+					</li>
+					
+				</ul>
+				<input type="submit" value="Sign UP!!!"  name="submit" />
+				
+			</fieldset>
+			
+			
+			
+		</form>
+        	
+            
+            
+            	
+
+	</div> <!-- closing primaryContent   -->
+	<footer>
+		<p>
+		&copy; Copyright  by jason zeringue
+		</p>
+	</footer>
+</body>
+</html>
